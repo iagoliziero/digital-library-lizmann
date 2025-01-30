@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
  function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navigate = useNavigate()
+
   return (
-    <div className="absolute right-2 md:right-12 lg:right-16 xl:right-36">
+    <div className="absolute right-2 md:right-[80px] lg:right-[150px] xl:right-[300px]">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center px-4 py-2 bg-transparent rounded-md"
@@ -13,23 +16,22 @@ import { Menu } from "lucide-react";
        <Menu className="text-brown" size={44} strokeWidth={2.75}/>
       </button>
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg text-center">
+        <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg flex justify-center">
           <ul className="py-2">
             <li>
-              <a
-                href="#"
+              <button
                 className="block p-5 text-xl hover:bg-gray-100  decoration-brown-700 underline underline-offset-[10px] decoration-brown decoration-[3px]"
               >
                 Minha Biblioteca
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#"
-                className="block p-5 text-xl hover:bg-gray-100 decoration-brown-700 underline underline-offset-[10px] decoration-brown decoration-[3px]"
+              <button
+              onClick={() => navigate(`/adicionarbooks`) }
+                className=" block p-5 text-xl hover:bg-gray-100 decoration-brown-700 underline underline-offset-[10px] decoration-brown decoration-[3px]"
               >
                 Adicionar Livros
-              </a>
+              </button>
             </li>
           </ul>
         </div>

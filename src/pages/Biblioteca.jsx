@@ -1,6 +1,8 @@
 import {Pencil, Trash2 } from "lucide-react";
 import { useEffect } from "react";
 import DropdownMenu from "../components/DropDownMenu.jsx";
+import { useNavigate } from "react-router-dom";
+
 
 function Biblioteca({ books }) {
   useEffect(() => {

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Biblioteca from "./pages/Biblioteca";
 
+
+
+
 function App() {
   const [books, setBooks] = useState([
     {
@@ -34,9 +37,11 @@ function App() {
       ano: 2018,
       genero: "Autobiografia/Motivação",
       imagem: "https://m.media-amazon.com/images/I/710oCZaYYUL.jpg",
-    },
+    }
   ]);
 
-  return <Biblioteca books={books} />;
+  return (
+  <Biblioteca books={books} />
+  )
 }
 export default App;
