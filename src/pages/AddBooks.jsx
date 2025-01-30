@@ -12,7 +12,7 @@ function AddBooks() {
         <div className="absolute left-2 md:left-[80px] lg:left-[150px] xl:left-[300px]">
         <button
         onClick={() => navigate(`/biblioteca`) } >
-        <ArrowLeft className=" w-14 h-8 md:h-12 text-brown hover:scale-105 transition " />
+        <ArrowLeft className=" w-14 h-10 md:h-14 text-brown hover:scale-105 transition " />
           </button>
         </div>
 
@@ -26,29 +26,37 @@ function AddBooks() {
         {/* Botão do menu */}
         <DropdownMenu />
       </div>
-
+      <span className="m-5 text-2xl md:text-3xl font-bold"> <h1> Adicionar Livro </h1> </span>
       {/* Add Books */}
       <div className="flex flex-col w-[370px] md:w-[430px] lg:w-[500px] h-[550px] md:h-[570px] border-2 border-zinc-500 rounded-2xl items-center text-center bg-slate-100 shadow-lg">
         <div className="flex flex-col p-10 gap-2">
           <div className="flex flex-col gap-3">
             <h2 className="text-xl md:text-2xl"> Nome do livro:</h2>
-            <input className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
+            <input 
+            maxLength={18} className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
           </div>
           <div className="flex flex-col gap-2">
             <h2 className="text-xl md:text-2xl"> Autor:</h2>
-            <input className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
+            <input 
+            maxLength={23}
+            className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
           </div>
           <div className="flex flex-col gap-3">
             <h2 className="text-xl md:text-2xl"> Gênero:</h2>
-            <input className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
+            <input 
+            maxLength={23}
+            className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h2 className="text-xl md:text-2xl"> Ano de lançamento:</h2>
+            <input
+            maxLength={23}
+            className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
           </div>
           <div className="flex flex-col gap-3">
             <h2 className="text-xl md:text-2xl"> URL da imagem:</h2>
-            <input className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
-          </div>
-          <div className="flex flex-col gap-3">
-            <h2 className="text-xl md:text-2xl"> Anotações :</h2>
-            <input className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
+            <input
+            className="p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-brown focus:bg-gray-100" type="text" />
           </div>
         </div>
 

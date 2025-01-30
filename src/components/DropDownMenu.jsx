@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center px-4 py-2 bg-transparent rounded-md"
       >
-       <Menu className="text-brown" size={44} strokeWidth={2.75}/>
+       <Menu className="text-brown w-14 h-10 md:h-14" />
       </button>
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg flex justify-center">
