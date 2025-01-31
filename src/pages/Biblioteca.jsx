@@ -2,6 +2,8 @@ import {Pencil, Trash2 } from "lucide-react";
 import { useEffect } from "react";
 import DropdownMenu from "../components/DropDownMenu.jsx";
 import { useNavigate } from "react-router-dom";
+import HeaderBiblioteca from "../components/HeaderBiblioteca.jsx";
+import AddBookCard from "../components/AddBookCard.jsx";
 
 
 function Biblioteca({ books }) {
@@ -28,21 +30,18 @@ function Biblioteca({ books }) {
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-gray-200 overflow-hidden">
-      {/* Container do logo centralizado */}
-      <div className="w-full flex justify-center items-center py-6 relative">
-        {/* Imagem do logo */}
-        <img
-          className="w-[100px] md:w-[125px]"
-          src="src/assets/logo-lizmann.png"
-          alt="logo lizmann"
-        />
-        {/* Botão do menu */}
-        <DropdownMenu />
-      </div>
+
+      {/* Container do logo */}
+      <HeaderBiblioteca />
 
       {/* Container para os cards dos livros com rolagem horizontal */}
+
+
+      {books.length > 0 ? (
+
       <div id="scroll-container" className="w-full px-6 mt-4 overflow-x-auto whitespace-nowrap flex gap-6 scrollbar-hide">
         {/* Mapeia a lista de livros e cria um card para cada um */}
+        
         {books.map((book) => (
           <div
             key={book.id} // Usa o id do livro como chave única
@@ -72,6 +71,9 @@ function Biblioteca({ books }) {
           </div>
         ))}
       </div>
+      ) : (
+        <AddBookCard />
+      ) }
 
       {/* Estilos para esconder a barra de rolagem (apenas visível quando necessário) */}
       <style>

@@ -20,8 +20,8 @@ import { useNavigate } from "react-router-dom";
           <ul className="py-2">
             <li>
               <button
-                className="block p-5 text-xl hover:bg-gray-100  decoration-brown-700 underline underline-offset-[10px] decoration-brown decoration-[3px]"
-              >
+              onClick={() => navigate(`/biblioteca`)}
+                className="block p-5 text-xl hover:bg-gray-100  decoration-brown-700 underline underline-offset-[10px] decoration-brown decoration-[3px]" >
                 Minha Biblioteca
               </button>
             </li>
