@@ -3,9 +3,10 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import HeaderBiblioteca from "../components/HeaderBiblioteca.jsx";
 import AddBookCard from "../components/AddBookCard.jsx";
+import TitleH2 from "../components/TitleH2.jsx";
+
 
 function Biblioteca({ books, deleteBook }) {
-  const navigate = useNavigate();
 
   useEffect(() => {
     const container = document.getElementById("scroll-container");
@@ -51,9 +52,9 @@ function Biblioteca({ books, deleteBook }) {
 
               <div className="flex flex-col gap-2 mt-4">
                 <h1 className="text-2xl font-semibold break-words">{book.title}</h1>
-                <h2 className="text-xl break-words">{book.author}</h2>
-                <h2 className="text-xl break-words">{book.year}</h2>
-                <h2 className="text-xl break-words">{book.genero}</h2>
+                <TitleH2 >{book.author}</TitleH2>
+                <TitleH2 >{book.year}</TitleH2>
+                <TitleH2>{book.genero}</TitleH2>
 
                 <div className="flex mt-4 justify-center gap-8 mb-6">
                   <button
@@ -62,12 +63,6 @@ function Biblioteca({ books, deleteBook }) {
                   >
                     <Trash2 />
                   </button>
-                  {/* <button
-                    onClick={() => navigate(`/editarbooks`)}
-                    className="w-14 bg-brown text-slate-100 p-4 h-14 rounded-lg hover:scale-105 transition"
-                  >
-                    <Pencil />
-                  </button> */}
                 </div>
               </div>
             </div>
