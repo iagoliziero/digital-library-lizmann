@@ -17,7 +17,7 @@ function HeaderBooks() {
         {/* Imagem do logo */}
         <img
           className="w-[100px] md:w-[125px]"
-          src="src/assets/logo-lizmann.png"
+          src="/Logo-lizmann.png"
           alt="logo lizmann"
         />
         {/* Botão do menu */}

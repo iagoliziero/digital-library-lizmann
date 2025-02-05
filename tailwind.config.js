@@ -22,7 +22,7 @@ export default {
         darker: ['Darker Grotesque', 'sans-serif'], // Nome customizado
       },
       backgroundImage: {
-        "bg-lizmann": "url('src/assets/bg-lizmann.png')",
+        "bg-lizmann":  "url('/bg-lizmann.png');",
         "logo-lizmann": "url('src/assets/logo-lizmann.png')",
           
       },
