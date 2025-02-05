@@ -3,6 +3,7 @@ import { set, useForm } from "react-hook-form";
 import HeaderBooks from "../components/HeaderBooks";
 import api from "../services/api.js"
 import { useState } from "react";
+import DivForm from "../components/DivForm.jsx";
 function AddBooks() {
 
   const navigate = useNavigate()
@@ -34,18 +35,19 @@ function AddBooks() {
       {/* Add Books */}
       <div className="flex flex-col w-[370px] md:w-[430px] lg:w-[500px] h-[550px] md:h-[570px] border-2 border-zinc-500 rounded-2xl items-center text-center bg-slate-100 shadow-lg">
         <div className="flex flex-col p-10 gap-2">
-          <div className="flex flex-col gap-3">
+          <DivForm>
             <h2 className="text-xl md:text-2xl"> Nome do livro:</h2>
 
             <input 
+            maxLength={18}
             {...register('title', {required:true} )}
             className={`p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-100 ${
               errors?.title ? "border-2 border-red-500" : "focus:ring-brown"
             }`}
               type="text" />
              
-          </div>
-          <div className="flex flex-col gap-2">
+          </DivForm>
+          <DivForm >
             <h2 className="text-xl md:text-2xl"> Autor:</h2>
             <input 
             {...register('author', {required:true})}
@@ -53,9 +55,9 @@ function AddBooks() {
             className={`p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-100 ${
               errors?.author ? "border-2 border-red-500" : "focus:ring-brown"
             }`} type="text" />
-          </div>
+          </DivForm>
 
-          <div className="flex flex-col gap-3">
+          <DivForm >
             <h2 className="text-xl md:text-2xl"> Gênero:</h2>
             <input 
             
@@ -64,9 +66,9 @@ function AddBooks() {
             className={`p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-100 ${
               errors?.genero ? "border-2 border-red-500" : "focus:ring-brown"
             }`} type="text" />
-          </div>
+          </DivForm>
 
-          <div className="flex flex-col gap-3">
+          <DivForm >
             <h2 className="text-xl md:text-2xl"> Ano de lançamento:</h2>
             <input
   
@@ -75,9 +77,9 @@ function AddBooks() {
             className={`p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-100 ${
               errors?.year ? "border-2 border-red-500" : "focus:ring-brown"
             }`} type="number" />
-          </div>
+          </DivForm>
 
-          <div className="flex flex-col gap-3">
+          <DivForm >
             <h2 className="text-xl md:text-2xl"> URL da imagem:</h2>
             <input
   
@@ -85,7 +87,7 @@ function AddBooks() {
             className={`p-1 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:bg-gray-100 ${
               errors?.urlImage ? "border-2 border-red-500" : "focus:ring-brown"
             }`} type="text" />
-          </div>
+          </DivForm>
         </div>
 
         <button

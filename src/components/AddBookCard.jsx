@@ -1,5 +1,6 @@
 import {CirclePlus,Plus } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import FormH2 from "./FormH2.jsx";
 
 function AddBookCard () {
   const navigate = useNavigate()
@@ -17,9 +18,9 @@ return (
         {/* Exibe as informações do livro */}
         <div className="flex flex-col gap-2 mt-4">
           <h1 className="text-2xl font-semibold break-words hover:text-brown hover:underline hover:underline-offset-4">Adicione seu Livro</h1>
-          <h2 className="text-xl break-words">Autor</h2>
-          <h2 className="text-xl break-words">Ano de Lançamento</h2>
-          <h2 className="text-xl break-words">Gênero</h2>
+          <FormH2>Autor</FormH2>
+          <FormH2 className="text-xl break-words">Ano de Lançamento</FormH2>
+          <FormH2>Gênero</FormH2>
 
           
           <div className="flex  justify-center items-center m-4">

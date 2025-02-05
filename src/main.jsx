@@ -5,7 +5,7 @@ import AddBooks from './pages/AddBooks.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import App from './App.jsx';
-import EditBooks from './pages/EditBooks.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -19,10 +19,6 @@ const router = createBrowserRouter([
   {
     path: '/adicionarbooks',
     element: <AddBooks />
-  },
-  {
-    path: '/editarbooks',
-    element: <EditBooks /> 
   }
 ]);
 
