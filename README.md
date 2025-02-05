@@ -19,7 +19,8 @@ O projeto foi desenvolvido com as seguintes tecnologias e bibliotecas:
 
 ### **Back-end**  
 
-> 🔹 O front-end se comunica com um **back-end RESTful**, responsável por armazenar e gerenciar os dados da biblioteca.  
+> 🔹 O front-end se comunica com um **back-end RESTful**, responsável por armazenar e gerenciar os dados da biblioteca.
+Repositório do Back-end: https://github.com/iagoliziero/server-lizmann
 
 ## 🎯 Funcionalidades  
 
