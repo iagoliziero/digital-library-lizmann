@@ -3,7 +3,7 @@
 [![Deploy no Vercel](https://img.shields.io/badge/Vercel-Digital--Library-blue)](https://digital-library-lizmann.vercel.app/)  
 
 <img width="450" alt="Image" src="https://github.com/user-attachments/assets/0f4bab9d-5640-48e4-b6bd-2185c9cef2bd" />
-
+<br>
 **Digital Library** é um sistema para gerenciamento de bibliotecas, permitindo **listagem, adição, edição e remoção de livros** de forma intuitiva e eficiente. O projeto foi desenvolvido utilizando **React** no front-end e se comunica com um back-end via **API REST**.  
 
 ## 🚀 Tecnologias  
